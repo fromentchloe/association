@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+$shaddow-box : 10px 5px 10px rgb(0, 0, 0);
+
+$sm : 0.2em;
+$md : 0.9em;
+$lg : 1.5em;
+
+$font-title:  'Londrina Outline', cursive;
+
+$marine:  rgb(0, 33, 99);
+$marine-light: rgb(0, 159, 174);
+$marine-opacity: rgba(0, 134, 147, 0.536);
+
+
+/*--------navbar---------*/
+
+.nav {
+    color: $marine;
+    .navbar {
+       
+        .logo {
+            text-decoration: none;
+            font-size: $lg;
+            color: $marine; 
+        }
+        .nav-links {
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            .link {
+                text-decoration: none;
+                padding: $md;
+                color: $marine;
+                transition: 0.2s;
+                &:hover {
+                    font-size: $lg;
+                    background: $marine;
+                    color: white;
+                }
+            }
+            .help {
+                display: flex;
+                align-items: center;
+                padding: $md;
+            }
+        }
+    }
+}
+.content {
+    margin-top: $md;
+    border: $sm solid $marine-opacity;
+    font-family: $font-title;
+    font-size: $lg + 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (min-width: 450px) {
+    .content {
+        text-align: end;
+        font-size: $lg + 3em;
+    } 
+    .logo {
+        float: left;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+
+@media screen and (min-width: 360px) {
+ 
+    
+}
+
+/*--------title-------*/
+
+
