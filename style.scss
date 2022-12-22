@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 
-body {
+* {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -17,13 +17,11 @@ $font-title:  'Londrina Outline', cursive;
 
 $marine:  rgb(0, 33, 99);
 $marine-light: rgb(0, 159, 174);
-$marine-opacity: rgba(0, 134, 147, 0.536);
+$marine-opacity:  rgba(0, 33, 99, 0.488);
 
 
 /*--------navbar---------*/
-header {
-    height: 100vh;
-}
+
 .nav {
     color: $marine;
     .navbar {
@@ -47,6 +45,7 @@ header {
                 padding: $md;
                 color: $marine;
                 transition: 0.3s;
+                margin: $sm;
                 &:hover {
                     font-size: $md + 0.2em;
                     background: $marine;
@@ -60,6 +59,7 @@ header {
                 border: 0;
                 border-radius: $md;
                 transition: 0.3s;
+                margin-left: $sm;
                 &:hover {
                     background: $marine;
                     font-size: $md + 0.1em;
@@ -70,7 +70,8 @@ header {
     }
 }
 .content {
-    margin: $sm 0 $sm 0;
+    text-decoration: none;
+    margin: $md 0 0 0;
     border: 0.2 solid $marine-opacity;
     font-family: $font-title;
     font-size: $lg + 1em;
@@ -81,8 +82,9 @@ header {
 
 @media screen and (min-width: 450px) {
     .content {
-        text-align: end;
-        font-size: $lg + 3em;
+        text-decoration: overline opacify($color: $marine-opacity, $amount: 0);
+        font-size: $lg + 2em;
+        margin: $lg 0 $md 0;
     } 
        .logo {
         float: left;
@@ -99,21 +101,48 @@ header {
     text-align: center;
     background-image: url(./media/wrapper.jpg);
     background-size: cover;
-    height: 50%;
     width: 100%;
     padding: $sm;
     margin: 0;
     box-shadow: $shaddow-box;
     color: white;
+    font-size: $lg;
     .title {
         text-decoration:overline;
         margin-bottom: $lg + 1em;
     }
 }
-@media screen and (min-width: 600px) {
-    .up {
-        background-size: cover;
-        height: 50%;
-        width: 100%;
+/*---------Main-Home-------*/
+main {
+    .percent {
+        text-align: center;
+        .title-main {
+            margin-top: $lg;
+            color: red;
+            text-decoration: overline;
+        }
+        .group-percent {
+            p {
+                border-top: $sm solid rgba(255, 0, 0, 0.411);
+                padding: $md;
+            }
+            .prc{
+                color: red;
+                font-size: $lg + 1em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 650px) {
+   .group-percent {
+        display: flex; 
+       p {
+        text-align: start;
+        border-bottom: $sm solid rgba(255, 0, 0, 0.411);
+       }
+       .border{
+        border-left: $sm solid rgba(255, 0, 0, 0.411);
+       }
     }
 }

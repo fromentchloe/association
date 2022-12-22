@@ -1,16 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap");
-body {
+* {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
 /*--------navbar---------*/
-header {
-  height: 100vh;
-}
-
 .nav {
   color: rgb(0, 33, 99);
 }
@@ -34,6 +30,7 @@ header {
   padding: 0.9em;
   color: rgb(0, 33, 99);
   transition: 0.3s;
+  margin: 0.2em;
 }
 .nav .navbar .nav-links .link:hover {
   font-size: 1.1em;
@@ -47,6 +44,7 @@ header {
   border: 0;
   border-radius: 0.9em;
   transition: 0.3s;
+  margin-left: 0.2em;
 }
 .nav .navbar .nav-links .help:hover {
   background: rgb(0, 33, 99);
@@ -55,8 +53,9 @@ header {
 }
 
 .content {
-  margin: 0.2em 0 0.2em 0;
-  border: 0.2 solid rgba(0, 134, 147, 0.536);
+  text-decoration: none;
+  margin: 0.9em 0 0 0;
+  border: 0.2 solid rgba(0, 33, 99, 0.488);
   font-family: "Londrina Outline", cursive;
   font-size: 2.5em;
   font-weight: bold;
@@ -66,8 +65,10 @@ header {
 
 @media screen and (min-width: 450px) {
   .content {
-    text-align: end;
-    font-size: 4.5em;
+    -webkit-text-decoration: overline rgba(0, 33, 99, 0.488);
+            text-decoration: overline rgba(0, 33, 99, 0.488);
+    font-size: 3.5em;
+    margin: 1.5em 0 0.9em 0;
   }
   .logo {
     float: left;
@@ -82,22 +83,45 @@ header {
   text-align: center;
   background-image: url(./media/wrapper.jpg);
   background-size: cover;
-  height: 50%;
   width: 100%;
   padding: 0.2em;
   margin: 0;
   box-shadow: 10px 5px 10px rgb(0, 0, 0);
   color: white;
+  font-size: 1.5em;
 }
 .up .title {
   text-decoration: overline;
   margin-bottom: 2.5em;
 }
 
-@media screen and (min-width: 600px) {
-  .up {
-    background-size: cover;
-    height: 50%;
-    width: 100%;
+/*---------Main-Home-------*/
+main .percent {
+  text-align: center;
+}
+main .percent .title-main {
+  margin-top: 1.5em;
+  color: red;
+  text-decoration: overline;
+}
+main .percent .group-percent p {
+  border-top: 0.2em solid rgba(255, 0, 0, 0.411);
+  padding: 0.9em;
+}
+main .percent .group-percent .prc {
+  color: red;
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 650px) {
+  .group-percent {
+    display: flex;
+  }
+  .group-percent p {
+    text-align: start;
+    border-bottom: 0.2em solid rgba(255, 0, 0, 0.411);
+  }
+  .group-percent .border {
+    border-left: 0.2em solid rgba(255, 0, 0, 0.411);
   }
 }/*# sourceMappingURL=style.css.map */
