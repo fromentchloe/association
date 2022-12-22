@@ -21,27 +21,34 @@ $marine-opacity: rgba(0, 134, 147, 0.536);
 
 
 /*--------navbar---------*/
-
+header {
+    height: 100vh;
+}
 .nav {
     color: $marine;
     .navbar {
        
         .logo {
             text-decoration: none;
-            font-size: $lg;
+            font-size: $lg + 1em;
             color: $marine; 
+            transition: 0.3s;
+            &:hover {
+                font-size: $lg + 1.2em;
+            }
         }
         .nav-links {
             align-items: center;
             list-style: none;
             padding: 0;
             .link {
+                border-radius: $md;
                 text-decoration: none;
                 padding: $md;
                 color: $marine;
-                transition: 0.2s;
+                transition: 0.3s;
                 &:hover {
-                    font-size: $lg;
+                    font-size: $md + 0.2em;
                     background: $marine;
                     color: white;
                 }
@@ -50,17 +57,26 @@ $marine-opacity: rgba(0, 134, 147, 0.536);
                 display: flex;
                 align-items: center;
                 padding: $md;
+                border: 0;
+                border-radius: $md;
+                transition: 0.3s;
+                &:hover {
+                    background: $marine;
+                    font-size: $md + 0.1em;
+                    color: white;
+                }
             }
         }
     }
 }
 .content {
-    margin-top: $md;
-    border: $sm solid $marine-opacity;
+    margin: $sm 0 $sm 0;
+    border: 0.2 solid $marine-opacity;
     font-family: $font-title;
     font-size: $lg + 1em;
     font-weight: bold;
     text-align: center;
+    padding: $sm;
 }
 
 @media screen and (min-width: 450px) {
@@ -68,7 +84,7 @@ $marine-opacity: rgba(0, 134, 147, 0.536);
         text-align: end;
         font-size: $lg + 3em;
     } 
-    .logo {
+       .logo {
         float: left;
     }
     .nav-links {
@@ -77,12 +93,27 @@ $marine-opacity: rgba(0, 134, 147, 0.536);
     }
 }
 
-
-@media screen and (min-width: 360px) {
- 
-    
-}
-
 /*--------title-------*/
 
-
+.up {
+    text-align: center;
+    background-image: url(./media/wrapper.jpg);
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+    padding: $sm;
+    margin: 0;
+    box-shadow: $shaddow-box;
+    color: white;
+    .title {
+        text-decoration:overline;
+        margin-bottom: $lg + 1em;
+    }
+}
+@media screen and (min-width: 600px) {
+    .up {
+        background-size: cover;
+        height: 50%;
+        width: 100%;
+    }
+}

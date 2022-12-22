@@ -7,13 +7,21 @@ body {
 }
 
 /*--------navbar---------*/
+header {
+  height: 100vh;
+}
+
 .nav {
   color: rgb(0, 33, 99);
 }
 .nav .navbar .logo {
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 2.5em;
   color: rgb(0, 33, 99);
+  transition: 0.3s;
+}
+.nav .navbar .logo:hover {
+  font-size: 2.7em;
 }
 .nav .navbar .nav-links {
   align-items: center;
@@ -21,13 +29,14 @@ body {
   padding: 0;
 }
 .nav .navbar .nav-links .link {
+  border-radius: 0.9em;
   text-decoration: none;
   padding: 0.9em;
   color: rgb(0, 33, 99);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .nav .navbar .nav-links .link:hover {
-  font-size: 1.5em;
+  font-size: 1.1em;
   background: rgb(0, 33, 99);
   color: white;
 }
@@ -35,15 +44,24 @@ body {
   display: flex;
   align-items: center;
   padding: 0.9em;
+  border: 0;
+  border-radius: 0.9em;
+  transition: 0.3s;
+}
+.nav .navbar .nav-links .help:hover {
+  background: rgb(0, 33, 99);
+  font-size: 1em;
+  color: white;
 }
 
 .content {
-  margin-top: 0.9em;
-  border: 0.2em solid rgba(0, 134, 147, 0.536);
+  margin: 0.2em 0 0.2em 0;
+  border: 0.2 solid rgba(0, 134, 147, 0.536);
   font-family: "Londrina Outline", cursive;
   font-size: 2.5em;
   font-weight: bold;
   text-align: center;
+  padding: 0.2em;
 }
 
 @media screen and (min-width: 450px) {
@@ -59,4 +77,27 @@ body {
     justify-content: end;
   }
 }
-/*--------title-------*//*# sourceMappingURL=style.css.map */
+/*--------title-------*/
+.up {
+  text-align: center;
+  background-image: url(./media/wrapper.jpg);
+  background-size: cover;
+  height: 50%;
+  width: 100%;
+  padding: 0.2em;
+  margin: 0;
+  box-shadow: 10px 5px 10px rgb(0, 0, 0);
+  color: white;
+}
+.up .title {
+  text-decoration: overline;
+  margin-bottom: 2.5em;
+}
+
+@media screen and (min-width: 600px) {
+  .up {
+    background-size: cover;
+    height: 50%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
