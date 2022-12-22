@@ -26,7 +26,7 @@ $marine-opacity:  rgba(0, 33, 99, 0.488);
 .nav {
     color: $marine;
     .navbar {
-       
+    
         .logo {
             text-decoration: none;
             font-size: $lg + 1em;
@@ -132,7 +132,6 @@ main {
             .prc{
                 color: red;
                 font-size: $lg + 1em;
-                font-weight: 1900;
             }
         }
     }
@@ -202,6 +201,32 @@ main {
     }
 }
 
+/*--------main-event-------*/
+
+
+.futur {
+    height: 100vh;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.text {
+    text-align: center;
+    
+}
+.bold {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+
+/*---------card--------*/
+.where {
+    float: center;
+}
 
 
 

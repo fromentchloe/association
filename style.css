@@ -115,7 +115,6 @@ main .percent .group-percent p {
 main .percent .group-percent .prc {
   color: red;
   font-size: 2.5em;
-  font-weight: 1900;
 }
 
 @media screen and (min-width: 650px) {
@@ -176,6 +175,30 @@ main .percent .group-percent .prc {
     width: 50%;
   }
 }
+/*--------main-event-------*/
+.futur {
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.text {
+  text-align: center;
+}
+
+.bold {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*---------card--------*/
+.where {
+  float: center;
+}
+
 /*------------footer----------------*/
 .feet {
   color: white;
