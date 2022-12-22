@@ -96,7 +96,11 @@
 }
 
 /*---------Main-Home-------*/
+main {
+  margin-bottom: 10%;
+}
 main .percent {
+  color: rgb(0, 33, 99);
   text-align: center;
 }
 main .percent .title-main {
@@ -111,6 +115,7 @@ main .percent .group-percent p {
 main .percent .group-percent .prc {
   color: red;
   font-size: 2.5em;
+  font-weight: 1900;
 }
 
 @media screen and (min-width: 650px) {
@@ -119,9 +124,71 @@ main .percent .group-percent .prc {
   }
   .group-percent p {
     text-align: start;
-    border-bottom: 0.2em solid rgba(255, 0, 0, 0.411);
+    margin-bottom: 0;
   }
   .group-percent .border {
-    border-left: 0.2em solid rgba(255, 0, 0, 0.411);
+    box-shadow: 10px 5px 10px rgb(0, 0, 0);
   }
+}
+/*---------content-------------*/
+.grid {
+  color: rgb(0, 33, 99);
+  border-top: 0.9em solid;
+  border-radius: 0.9em;
+}
+.grid h2 {
+  text-decoration: overline;
+  text-align: center;
+  font-family: "Londrina Outline", cursive;
+  font-size: 2.5em;
+}
+
+.pic {
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 10px 5px 10px rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 760px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". commitment" ". commitment" ". commitment";
+    gap: 2em;
+  }
+  .commitment {
+    box-shadow: 10px 5px 10px 10px rgb(0, 0, 0);
+    padding-left: 2em;
+    grid-area: commitment;
+  }
+  .commitment .director {
+    margin-top: 6.5em;
+  }
+  .commitment .engage {
+    margin-top: 6.5em;
+  }
+  .climate {
+    box-shadow: 10px 5px 10px rgb(0, 0, 0);
+  }
+  .pic {
+    margin-left: 25%;
+    width: 50%;
+  }
+}
+/*------------footer----------------*/
+.feet {
+  color: white;
+  background: black;
+  text-align: center;
+}
+.feet p {
+  background: rgb(75, 75, 75);
+}
+.feet a {
+  color: rgb(0, 176, 0);
+  transition: 0.2s;
+}
+.feet a:hover {
+  font-size: 1.5em;
 }/*# sourceMappingURL=style.css.map */

@@ -7,11 +7,12 @@
     font-weight: bold;
 }
 
-$shaddow-box : 10px 5px 10px rgb(0, 0, 0);
-
 $sm : 0.2em;
 $md : 0.9em;
 $lg : 1.5em;
+
+$shaddow-box : 10px 5px 10px rgb(0, 0, 0);
+$border-red: $sm solid rgba(255, 0, 0, 0.411);
 
 $font-title:  'Londrina Outline', cursive;
 
@@ -86,7 +87,7 @@ $marine-opacity:  rgba(0, 33, 99, 0.488);
         font-size: $lg + 2em;
         margin: $lg 0 $md 0;
     } 
-       .logo {
+    .logo {
         float: left;
     }
     .nav-links {
@@ -114,7 +115,9 @@ $marine-opacity:  rgba(0, 33, 99, 0.488);
 }
 /*---------Main-Home-------*/
 main {
+    margin-bottom: 10%;
     .percent {
+        color: $marine;
         text-align: center;
         .title-main {
             margin-top: $lg;
@@ -123,12 +126,13 @@ main {
         }
         .group-percent {
             p {
-                border-top: $sm solid rgba(255, 0, 0, 0.411);
+                border-top: $border-red;
                 padding: $md;
             }
             .prc{
                 color: red;
                 font-size: $lg + 1em;
+                font-weight: 1900;
             }
         }
     }
@@ -139,10 +143,146 @@ main {
         display: flex; 
        p {
         text-align: start;
-        border-bottom: $sm solid rgba(255, 0, 0, 0.411);
+        margin-bottom: 0;
        }
        .border{
-        border-left: $sm solid rgba(255, 0, 0, 0.411);
+        box-shadow: $shaddow-box;
        }
+    }
+}
+
+/*---------content-------------*/
+
+.grid {
+    color: $marine;   
+    border-top: $md solid;
+    border-radius: $md;
+    h2 {
+        text-decoration: overline;
+        text-align: center;
+        font-family: $font-title;
+        font-size: $lg + 1em;
+    }
+}
+
+.pic {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 10px 5px 10px rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 760px) {
+     .grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        ". commitment"
+        ". commitment"
+        ". commitment";
+        gap: 2em;
+    } 
+        .commitment {
+        box-shadow: 10px 5px 10px 10px rgb(0, 0, 0);
+        padding-left: 2em;
+        grid-area: commitment;
+        .director {
+            margin-top: $lg + 5em;
+        }
+        .engage {
+            margin-top: $lg + 5em;
+        }
+    }
+    .climate {
+        box-shadow: $shaddow-box;
+    }
+    .pic {
+        margin-left: 25%;
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------footer----------------*/
+
+.feet {
+    color: white;
+    background: black;
+    text-align: center;
+    p {
+        background:rgb(75, 75, 75);
+    }
+    a {
+        color: rgb(0, 176, 0);
+        transition: 0.2s;
+        &:hover {
+            font-size: $lg;
+        }
     }
 }
