@@ -146,6 +146,8 @@ main {
        }
        .border{
         box-shadow: $shaddow-box;
+        border-radius: $lg;
+        %;
        }
     }
 }
@@ -203,100 +205,65 @@ main {
 
 /*--------main-event-------*/
 
-
-.futur {
-    height: 100vh;
-}
-h2 {
+.event {
+    margin: 0;
+    color: $marine;
     text-align: center;
-    text-decoration: underline;
+    .carte {
+        .text{
+            margin-bottom: $lg;
+        }
+        .time {
+            margin-bottom: $lg;
+        }
+        .place {
+            margin-bottom: $lg;
+            .carte {
+                width: 100%;
+            }
+        }
+    }
+    .icon {
+        font-size: 50px;
+        }
 }
 
-.text {
-    text-align: center;
-    
-}
 .bold {
-    font-size: 1.5em;
-    font-weight: bold;
-}
+        font-size: $lg;
+        margin: 0;
+    }
 
 
+@media screen and (min-width: 600px) {
+        .icon {
+            font-size: 100px;
+            }
+    }
 
 /*---------card--------*/
-.where {
-    float: center;
+
+.card {
+    box-shadow: $shaddow-box;
+    border-radius: 10px;
+    .date {
+        display: flex;
+        align-content: center;
+    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 700px) {
+    .group-card {
+        display: flex;
+        justify-content: space-between;
+    }
+    .card {
+        margin-left: $lg;
+    }
+}
 /*------------footer----------------*/
 
 .feet {
+    margin-top: $md;
     color: white;
     background: black;
     text-align: center;
@@ -306,8 +273,5 @@ h2 {
     a {
         color: rgb(0, 176, 0);
         transition: 0.2s;
-        &:hover {
-            font-size: $lg;
-        }
     }
 }

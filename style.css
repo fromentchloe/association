@@ -127,6 +127,7 @@ main .percent .group-percent .prc {
   }
   .group-percent .border {
     box-shadow: 10px 5px 10px rgb(0, 0, 0);
+    border-radius: 10%;
   }
 }
 /*---------content-------------*/
@@ -176,31 +177,59 @@ main .percent .group-percent .prc {
   }
 }
 /*--------main-event-------*/
-.futur {
-  height: 100vh;
-}
-
-h2 {
+.event {
+  margin: 0;
+  color: rgb(0, 33, 99);
   text-align: center;
-  text-decoration: underline;
 }
-
-.text {
-  text-align: center;
+.event .carte .text {
+  margin-bottom: 1.5em;
+}
+.event .carte .time {
+  margin-bottom: 1.5em;
+}
+.event .carte .place {
+  margin-bottom: 1.5em;
+}
+.event .carte .place .carte {
+  width: 100%;
+}
+.event .icon {
+  font-size: 50px;
 }
 
 .bold {
   font-size: 1.5em;
-  font-weight: bold;
+  margin: 0;
 }
 
+@media screen and (min-width: 600px) {
+  .icon {
+    font-size: 100px;
+  }
+}
 /*---------card--------*/
-.where {
-  float: center;
+.card {
+  box-shadow: 10px 5px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.card .date {
+  display: flex;
+  align-content: center;
 }
 
+@media screen and (min-width: 700px) {
+  .group-card {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card {
+    margin-left: 1.5em;
+  }
+}
 /*------------footer----------------*/
 .feet {
+  margin-top: 0.9em;
   color: white;
   background: black;
   text-align: center;
@@ -211,7 +240,4 @@ h2 {
 .feet a {
   color: rgb(0, 176, 0);
   transition: 0.2s;
-}
-.feet a:hover {
-  font-size: 1.5em;
 }/*# sourceMappingURL=style.css.map */
